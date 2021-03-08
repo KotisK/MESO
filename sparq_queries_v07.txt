@@ -1,0 +1,49 @@
+•	Which exhibits are located in UoAMuseumRoomA1?
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX geonames: <http://www.geonames.org/ontology#>
+PREFIX :<http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl#>
+SELECT ?x 
+WHERE { ?x  geonames:locatedIn :UoAMuseumRoomA1}
+
+•	How many sensors (all kinds) are hosted by IoTmuseumPlatfromLG?
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX geonames: <http://www.geonames.org/ontology#>
+PREFIX sosa:<http://www.w3.org/ns/sosa/>
+PREFIX :<http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl#>
+SELECT (COUNT(?x) AS ?numOfSensors)
+WHERE {:IoTmuseumPlatfromLG sosa:hosts ?x}
+
+•	Which rooms have been visited  by Visitor01 visited?
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX geonames: <http://www.geonames.org/ontology#>
+PREFIX sosa:<http://www.w3.org/ns/sosa/>
+PREFIX :<http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl#>
+SELECT ?x 
+WHERE { :Visitor01 :visits ?x}
+
+•	How many temperature measurements have been made in UoAMuseumRoomA1 between 09.00 and 17.00 on 07/12/2020?
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX geonames: <http://www.geonames.org/ontology#>
+PREFIX sosa:<http://www.w3.org/ns/sosa/>
+PREFIX :<http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl#>
+SELECT ?Observations
+WHERE {
+?Observations sosa:hasFeatureOfInterest :UoAMuseumRoomA1.
+?Observations sosa:resultTime ?resultTime 
+FILTER(?resultTime>="2020-12-07T09:00:12Z"^^xsd:dateTime && ?resultTime <="2020-12-07T17:00:12Z"^^xsd:dateTime).
+}
+
+
