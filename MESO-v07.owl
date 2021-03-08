@@ -1,0 +1,1286 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl"
+     versionIRI="http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso-v07.owl">
+    <Prefix name="" IRI="http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://i-lab.aegean.gr/kotis/Ontologies/IoT/IoT-trust-onto-v06.owl</Import>
+    <Import>http://www.w3.org/ns/sosa/</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+        <Literal xml:lang="en">Kotis K.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal xml:lang="en">Zachila K.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal xml:lang="en">Museum Energy Saving Ontology (MESO)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="el">The aim of the ontology is to represent the knowledge related to BEMS&apos;s trustworthy IoT entities deployed in museums. The specific objectives of the ontology are: a) to represent the knowledge related to the trustworthy IoT entities that &apos;live&apos; in a museum, i.e., things (e.g., artworks, spaces), sensors, actuators, people, data, applications; b) to deal with the semantic interoperability and integration of &quot;smart&quot; museum applications and data in general; c) to represent knowledge related to energy saving; d) represent knowledge related to museum visits and visitors towards enhancing visiting experience and preserve comfort; e) represent knowledge related to the monitoring of environmental conditions towards protecting and preserving museum artwork.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en">version 0.7</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://erlangen-crm.org/160714/E22_Man-Made_Object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Exhibit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExhibitProximity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExhibitProximityObservation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Exhibit_painting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Exhibit_sculpture"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IndoorTemperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InterestingExhibitProximityObservation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Museum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MuseumRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MuseumRoomTempObservation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MuseumVisit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ObservationToHighLevelEnergy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ObservationToLowLevelEnergy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OutdoorTemperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProxSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Proximity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RoomTemperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TempSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Temperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tourist"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VIP"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VIP_visitor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/Painting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/Sculpture"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.crosscult.eu/UserModel#Visit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.crosscult.eu/UserModel#Visitor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/sosa/Observation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://saref.etsi.org/saref4bldg/Building"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://saref.etsi.org/saref4bldg/Lamp"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLightedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#lights"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#visited_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#visits"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/recognition/Cim#isLocatedAt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/location"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.geonames.org/ontology#locatedIn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#brighteningLevel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nearByVisitors"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.geonames.org/ontology#nearby"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IoTmuseumPlatformLG"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LGtempSensor01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Painting01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Painting02"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Painting03"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Painting04"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartLamp1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartLamp2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartLamp3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartLamp4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartLamp5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartLamp6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartLamp7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartLamp8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#UoAMuseum"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#UoAMuseumRoomA1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#UoAMuseumRoomA2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Visitor01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Visitor02"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Visitor03"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Visitor04"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Visitor05"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#exhibitProximityObservation0001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#exhibitProximityObservation0002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#exhibitProximityObservation0003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#exhibitProximityObservation0004"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#exhibitProximityObservation0005"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#exhibitProximityObservation0006"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#museumRoomTempObservation0001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#museumRoomTempObservation0002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#museumRoomTempObservation0003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#museumRoomTempObservation0004"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#proximityExhibit01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#proximityExhibit02"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#proximityExhibit03"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#proximityExhibit04"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#proximityExhibit05"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#proximitySensor01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#proximitySensor02"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#proximitySensor03"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#proximitySensor04"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#proximitySensor05"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sculpture01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sculpture02"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sculpture03"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sculpture04"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#temperatureInMuseumRoom"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#temperatureInUniversityRoom"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#teriadeMuseum"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#teriadeMuseumRoomA1"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Exhibit"/>
+        <Class IRI="http://erlangen-crm.org/160714/E22_Man-Made_Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExhibitProximity"/>
+        <Class IRI="#Proximity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExhibitProximityObservation"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Exhibit_painting"/>
+        <Class IRI="#Exhibit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Exhibit_painting"/>
+        <Class IRI="http://schema.org/Painting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Exhibit_sculpture"/>
+        <Class IRI="#Exhibit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Exhibit_sculpture"/>
+        <Class IRI="http://schema.org/Sculpture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IndoorTemperature"/>
+        <Class IRI="#Temperature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InterestingExhibitProximityObservation"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Museum"/>
+        <Class IRI="https://saref.etsi.org/saref4bldg/Building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MuseumRoom"/>
+        <Class IRI="#Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MuseumRoomTempObservation"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MuseumVisit"/>
+        <Class IRI="http://www.crosscult.eu/UserModel#Visit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ObservationToHighLevelEnergy"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ObservationToLowLevelEnergy"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OutdoorTemperature"/>
+        <Class IRI="#Temperature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProxSensor"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Proximity"/>
+        <Class IRI="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Room"/>
+        <Class IRI="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoomTemperature"/>
+        <Class IRI="#IndoorTemperature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TempSensor"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TempSensor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/observes"/>
+            <Class IRI="#Temperature"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Temperature"/>
+        <Class IRI="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tourist"/>
+        <Class IRI="http://www.crosscult.eu/UserModel#Visitor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VIP_visitor"/>
+        <Class IRI="#VIP"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VIP_visitor"/>
+        <Class IRI="http://www.crosscult.eu/UserModel#Visitor"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/sosa/Platform"/>
+        <NamedIndividual IRI="#IoTmuseumPlatformLG"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TempSensor"/>
+        <NamedIndividual IRI="#LGtempSensor01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Exhibit_painting"/>
+        <NamedIndividual IRI="#Painting01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Exhibit_painting"/>
+        <NamedIndividual IRI="#Painting02"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Exhibit_painting"/>
+        <NamedIndividual IRI="#Painting03"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Exhibit_painting"/>
+        <NamedIndividual IRI="#Painting04"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://saref.etsi.org/saref4bldg/Lamp"/>
+        <NamedIndividual IRI="#SmartLamp1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://saref.etsi.org/saref4bldg/Lamp"/>
+        <NamedIndividual IRI="#SmartLamp2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://saref.etsi.org/saref4bldg/Lamp"/>
+        <NamedIndividual IRI="#SmartLamp3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://saref.etsi.org/saref4bldg/Lamp"/>
+        <NamedIndividual IRI="#SmartLamp4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://saref.etsi.org/saref4bldg/Lamp"/>
+        <NamedIndividual IRI="#SmartLamp5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://saref.etsi.org/saref4bldg/Lamp"/>
+        <NamedIndividual IRI="#SmartLamp6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://saref.etsi.org/saref4bldg/Lamp"/>
+        <NamedIndividual IRI="#SmartLamp7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://saref.etsi.org/saref4bldg/Lamp"/>
+        <NamedIndividual IRI="#SmartLamp8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Museum"/>
+        <NamedIndividual IRI="#UoAMuseum"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MuseumRoom"/>
+        <NamedIndividual IRI="#UoAMuseumRoomA1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MuseumRoom"/>
+        <NamedIndividual IRI="#UoAMuseumRoomA2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.crosscult.eu/UserModel#Visitor"/>
+        <NamedIndividual IRI="#Visitor01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.crosscult.eu/UserModel#Visitor"/>
+        <NamedIndividual IRI="#Visitor02"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.crosscult.eu/UserModel#Visitor"/>
+        <NamedIndividual IRI="#Visitor03"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.crosscult.eu/UserModel#Visitor"/>
+        <NamedIndividual IRI="#Visitor04"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.crosscult.eu/UserModel#Visitor"/>
+        <NamedIndividual IRI="#Visitor05"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ExhibitProximityObservation"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ExhibitProximityObservation"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ExhibitProximityObservation"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ExhibitProximityObservation"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ExhibitProximityObservation"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0005"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ExhibitProximityObservation"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MuseumRoomTempObservation"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MuseumRoomTempObservation"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MuseumRoomTempObservation"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MuseumRoomTempObservation"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ExhibitProximity"/>
+        <NamedIndividual IRI="#proximityExhibit01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ExhibitProximity"/>
+        <NamedIndividual IRI="#proximityExhibit02"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ExhibitProximity"/>
+        <NamedIndividual IRI="#proximityExhibit03"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ExhibitProximity"/>
+        <NamedIndividual IRI="#proximityExhibit04"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ExhibitProximity"/>
+        <NamedIndividual IRI="#proximityExhibit05"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProxSensor"/>
+        <NamedIndividual IRI="#proximitySensor01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProxSensor"/>
+        <NamedIndividual IRI="#proximitySensor02"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProxSensor"/>
+        <NamedIndividual IRI="#proximitySensor03"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProxSensor"/>
+        <NamedIndividual IRI="#proximitySensor04"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProxSensor"/>
+        <NamedIndividual IRI="#proximitySensor05"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Exhibit_sculpture"/>
+        <NamedIndividual IRI="#sculpture01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Exhibit_sculpture"/>
+        <NamedIndividual IRI="#sculpture02"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Exhibit_sculpture"/>
+        <NamedIndividual IRI="#sculpture03"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Exhibit_sculpture"/>
+        <NamedIndividual IRI="#sculpture04"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RoomTemperature"/>
+        <NamedIndividual IRI="#temperatureInMuseumRoom"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RoomTemperature"/>
+        <NamedIndividual IRI="#temperatureInUniversityRoom"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Museum"/>
+        <NamedIndividual IRI="#teriadeMuseum"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MuseumRoom"/>
+        <NamedIndividual IRI="#teriadeMuseumRoomA1"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hosts"/>
+        <NamedIndividual IRI="#IoTmuseumPlatformLG"/>
+        <NamedIndividual IRI="#LGtempSensor01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hosts"/>
+        <NamedIndividual IRI="#IoTmuseumPlatformLG"/>
+        <NamedIndividual IRI="#proximitySensor01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hosts"/>
+        <NamedIndividual IRI="#IoTmuseumPlatformLG"/>
+        <NamedIndividual IRI="#proximitySensor02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hosts"/>
+        <NamedIndividual IRI="#IoTmuseumPlatformLG"/>
+        <NamedIndividual IRI="#proximitySensor03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hosts"/>
+        <NamedIndividual IRI="#IoTmuseumPlatformLG"/>
+        <NamedIndividual IRI="#proximitySensor04"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hosts"/>
+        <NamedIndividual IRI="#IoTmuseumPlatformLG"/>
+        <NamedIndividual IRI="#proximitySensor05"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/observes"/>
+        <NamedIndividual IRI="#LGtempSensor01"/>
+        <NamedIndividual IRI="#temperatureInMuseumRoom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.geonames.org/ontology#locatedIn"/>
+        <NamedIndividual IRI="#Painting01"/>
+        <NamedIndividual IRI="#UoAMuseumRoomA1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.geonames.org/ontology#locatedIn"/>
+        <NamedIndividual IRI="#Painting02"/>
+        <NamedIndividual IRI="#UoAMuseumRoomA1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.geonames.org/ontology#locatedIn"/>
+        <NamedIndividual IRI="#Painting03"/>
+        <NamedIndividual IRI="#UoAMuseumRoomA1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.geonames.org/ontology#locatedIn"/>
+        <NamedIndividual IRI="#Painting04"/>
+        <NamedIndividual IRI="#UoAMuseumRoomA1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#lights"/>
+        <NamedIndividual IRI="#SmartLamp1"/>
+        <NamedIndividual IRI="#Painting01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#lights"/>
+        <NamedIndividual IRI="#SmartLamp2"/>
+        <NamedIndividual IRI="#Painting02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#lights"/>
+        <NamedIndividual IRI="#SmartLamp3"/>
+        <NamedIndividual IRI="#Painting03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#lights"/>
+        <NamedIndividual IRI="#SmartLamp4"/>
+        <NamedIndividual IRI="#Painting04"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#lights"/>
+        <NamedIndividual IRI="#SmartLamp5"/>
+        <NamedIndividual IRI="#sculpture01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#lights"/>
+        <NamedIndividual IRI="#SmartLamp6"/>
+        <NamedIndividual IRI="#sculpture02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#lights"/>
+        <NamedIndividual IRI="#SmartLamp7"/>
+        <NamedIndividual IRI="#sculpture03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#lights"/>
+        <NamedIndividual IRI="#SmartLamp8"/>
+        <NamedIndividual IRI="#sculpture04"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://schema.org/location"/>
+        <NamedIndividual IRI="#UoAMuseumRoomA1"/>
+        <NamedIndividual IRI="#UoAMuseum"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://schema.org/location"/>
+        <NamedIndividual IRI="#UoAMuseumRoomA2"/>
+        <NamedIndividual IRI="#UoAMuseumRoomA2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#visits"/>
+        <NamedIndividual IRI="#Visitor01"/>
+        <NamedIndividual IRI="#UoAMuseumRoomA1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#visits"/>
+        <NamedIndividual IRI="#Visitor02"/>
+        <NamedIndividual IRI="#UoAMuseumRoomA1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#visits"/>
+        <NamedIndividual IRI="#Visitor03"/>
+        <NamedIndividual IRI="#UoAMuseumRoomA1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#visits"/>
+        <NamedIndividual IRI="#Visitor04"/>
+        <NamedIndividual IRI="#UoAMuseumRoomA1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#visits"/>
+        <NamedIndividual IRI="#Visitor05"/>
+        <NamedIndividual IRI="#UoAMuseumRoomA2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0001"/>
+        <NamedIndividual IRI="#Painting01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0001"/>
+        <NamedIndividual IRI="#proximitySensor01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/observedProperty"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0001"/>
+        <NamedIndividual IRI="#proximityExhibit01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0002"/>
+        <NamedIndividual IRI="#Painting02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0002"/>
+        <NamedIndividual IRI="#proximitySensor02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/observedProperty"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0002"/>
+        <NamedIndividual IRI="#proximityExhibit02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0003"/>
+        <NamedIndividual IRI="#Painting03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0003"/>
+        <NamedIndividual IRI="#proximitySensor03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/observedProperty"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0003"/>
+        <NamedIndividual IRI="#proximityExhibit03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0004"/>
+        <NamedIndividual IRI="#Painting04"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0004"/>
+        <NamedIndividual IRI="#proximitySensor04"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/observedProperty"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0004"/>
+        <NamedIndividual IRI="#proximityExhibit04"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0005"/>
+        <NamedIndividual IRI="#sculpture02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0005"/>
+        <NamedIndividual IRI="#proximitySensor05"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/observedProperty"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0005"/>
+        <NamedIndividual IRI="#proximityExhibit05"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0006"/>
+        <NamedIndividual IRI="#sculpture02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0006"/>
+        <NamedIndividual IRI="#proximitySensor05"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/observedProperty"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0006"/>
+        <NamedIndividual IRI="#proximityExhibit05"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0001"/>
+        <NamedIndividual IRI="#UoAMuseumRoomA1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0001"/>
+        <NamedIndividual IRI="#LGtempSensor01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/observedProperty"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0001"/>
+        <NamedIndividual IRI="#temperatureInMuseumRoom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0002"/>
+        <NamedIndividual IRI="#UoAMuseumRoomA1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0002"/>
+        <NamedIndividual IRI="#LGtempSensor01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/observedProperty"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0002"/>
+        <NamedIndividual IRI="#temperatureInMuseumRoom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0003"/>
+        <NamedIndividual IRI="#UoAMuseumRoomA1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0003"/>
+        <NamedIndividual IRI="#LGtempSensor01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/observedProperty"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0003"/>
+        <NamedIndividual IRI="#temperatureInMuseumRoom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0004"/>
+        <NamedIndividual IRI="#UoAMuseumRoomA1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0004"/>
+        <NamedIndividual IRI="#LGtempSensor01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/observedProperty"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0004"/>
+        <NamedIndividual IRI="#temperatureInMuseumRoom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/observes"/>
+        <NamedIndividual IRI="#proximitySensor01"/>
+        <NamedIndividual IRI="#proximityExhibit01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/observes"/>
+        <NamedIndividual IRI="#proximitySensor02"/>
+        <NamedIndividual IRI="#proximityExhibit02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/observes"/>
+        <NamedIndividual IRI="#proximitySensor03"/>
+        <NamedIndividual IRI="#proximityExhibit03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/observes"/>
+        <NamedIndividual IRI="#proximitySensor04"/>
+        <NamedIndividual IRI="#proximityExhibit04"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/observes"/>
+        <NamedIndividual IRI="#proximitySensor05"/>
+        <NamedIndividual IRI="#proximityExhibit05"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.geonames.org/ontology#locatedIn"/>
+        <NamedIndividual IRI="#sculpture01"/>
+        <NamedIndividual IRI="#UoAMuseumRoomA2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.geonames.org/ontology#locatedIn"/>
+        <NamedIndividual IRI="#sculpture02"/>
+        <NamedIndividual IRI="#UoAMuseumRoomA1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.geonames.org/ontology#locatedIn"/>
+        <NamedIndividual IRI="#sculpture03"/>
+        <NamedIndividual IRI="#UoAMuseumRoomA2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.geonames.org/ontology#locatedIn"/>
+        <NamedIndividual IRI="#sculpture04"/>
+        <NamedIndividual IRI="#UoAMuseumRoomA2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://schema.org/location"/>
+        <NamedIndividual IRI="#teriadeMuseumRoomA1"/>
+        <NamedIndividual IRI="#teriadeMuseum"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#brighteningLevel"/>
+        <NamedIndividual IRI="#SmartLamp1"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#brighteningLevel"/>
+        <NamedIndividual IRI="#SmartLamp2"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#brighteningLevel"/>
+        <NamedIndividual IRI="#SmartLamp3"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#brighteningLevel"/>
+        <NamedIndividual IRI="#SmartLamp4"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#brighteningLevel"/>
+        <NamedIndividual IRI="#SmartLamp5"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#brighteningLevel"/>
+        <NamedIndividual IRI="#SmartLamp6"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#brighteningLevel"/>
+        <NamedIndividual IRI="#SmartLamp7"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#brighteningLevel"/>
+        <NamedIndividual IRI="#SmartLamp8"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#brighteningLevel"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0001"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nearByVisitors"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-15T09:00:12Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#brighteningLevel"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0002"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nearByVisitors"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0002"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0002"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-15T09:00:12Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#brighteningLevel"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0003"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nearByVisitors"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0003"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0003"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-15T09:00:12Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#brighteningLevel"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0004"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nearByVisitors"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0004"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0004"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-15T09:00:12Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#brighteningLevel"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0005"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nearByVisitors"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0005"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0005"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-15T10:00:12Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#brighteningLevel"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0006"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nearByVisitors"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0006"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0006"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-15T09:00:12Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">18.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-07T09:00:12Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0002"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">20.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0002"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-07T12:00:12Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0003"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">21.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0003"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-07T15:00:12Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0004"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">17.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0004"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-07T20:00:12Z</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isLightedBy"/>
+        <ObjectProperty IRI="#lights"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#visited_by"/>
+        <ObjectProperty IRI="#visits"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#lights"/>
+        <Class IRI="https://saref.etsi.org/saref4bldg/Lamp"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#visits"/>
+        <Class IRI="http://www.crosscult.eu/UserModel#Visitor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.geonames.org/ontology#locatedIn"/>
+        <Class IRI="#Exhibit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#lights"/>
+        <Class IRI="#Exhibit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#visits"/>
+        <Class IRI="#MuseumRoom"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.geonames.org/ontology#locatedIn"/>
+        <Class IRI="#MuseumRoom"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#nearByVisitors"/>
+        <DataProperty IRI="http://www.geonames.org/ontology#nearby"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://www.geonames.org/ontology#nearby"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyRange>
+        <DataProperty IRI="#brighteningLevel"/>
+        <DataOneOf>
+            <Literal>High</Literal>
+            <Literal>Low</Literal>
+            <Literal>Medium</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nearByVisitors"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#brighteningLevel"/>
+                <Variable IRI="urn:swrl:var#exhibit"/>
+                <Literal>Medium</Literal>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="urn:swrl:var#numOfVisitorsNearExhibit"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#nearByVisitors"/>
+                <Variable IRI="urn:swrl:var#exhibit"/>
+                <Variable IRI="urn:swrl:var#numOfVisitorsNearExhibit"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
+                <Variable IRI="urn:swrl:var#exhibit"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-15T09:00:12Z</Literal>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#InterestingExhibitProximityObservation"/>
+                <Variable IRI="urn:swrl:var#exhibit"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#ObservationToHighLevelEnergy"/>
+                <Variable IRI="urn:swrl:var#exhibit"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThan">
+                <Variable IRI="urn:swrl:var#numOfVisitorsNearExhibit"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#brighteningLevel"/>
+                <Variable IRI="urn:swrl:var#exhibit"/>
+                <Literal>Medium</Literal>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#nearByVisitors"/>
+                <Variable IRI="urn:swrl:var#exhibit"/>
+                <Variable IRI="urn:swrl:var#numOfVisitorsNearExhibit"/>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#ObservationToLowLevelEnergy"/>
+                <Variable IRI="urn:swrl:var#exhibit"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#ExhibitProximityObservation</IRI>
+        <Literal>Konstantinos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#InterestingExhibitProximityObservation</IRI>
+        <Literal>Konstantinos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#MuseumVisit</IRI>
+        <Literal>Konstantina</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#ObservationToHighLevelEnergy</IRI>
+        <Literal>Konstantinos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#ObservationToLowLevelEnergy</IRI>
+        <Literal>Konstantinos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#exhibitProximityObservation0001</IRI>
+        <Literal>Konstantinos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#isLightedBy</IRI>
+        <Literal>Konstantinos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#nearByVisitors</IRI>
+        <Literal>Konstantinos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#proximitySensor01</IRI>
+        <Literal>Konstantinos</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
