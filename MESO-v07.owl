@@ -93,6 +93,9 @@
         <Class IRI="#RoomTemperature"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#SmartLamp"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#TempSensor"/>
     </Declaration>
     <Declaration>
@@ -398,6 +401,10 @@
         <Class IRI="#IndoorTemperature"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#SmartLamp"/>
+        <Class IRI="https://saref.etsi.org/saref4bldg/Lamp"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#TempSensor"/>
         <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
     </SubClassOf>
@@ -449,35 +456,35 @@
         <NamedIndividual IRI="#Painting04"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="https://saref.etsi.org/saref4bldg/Lamp"/>
+        <Class IRI="#SmartLamp"/>
         <NamedIndividual IRI="#SmartLamp1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="https://saref.etsi.org/saref4bldg/Lamp"/>
+        <Class IRI="#SmartLamp"/>
         <NamedIndividual IRI="#SmartLamp2"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="https://saref.etsi.org/saref4bldg/Lamp"/>
+        <Class IRI="#SmartLamp"/>
         <NamedIndividual IRI="#SmartLamp3"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="https://saref.etsi.org/saref4bldg/Lamp"/>
+        <Class IRI="#SmartLamp"/>
         <NamedIndividual IRI="#SmartLamp4"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="https://saref.etsi.org/saref4bldg/Lamp"/>
+        <Class IRI="#SmartLamp"/>
         <NamedIndividual IRI="#SmartLamp5"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="https://saref.etsi.org/saref4bldg/Lamp"/>
+        <Class IRI="#SmartLamp"/>
         <NamedIndividual IRI="#SmartLamp6"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="https://saref.etsi.org/saref4bldg/Lamp"/>
+        <Class IRI="#SmartLamp"/>
         <NamedIndividual IRI="#SmartLamp7"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="https://saref.etsi.org/saref4bldg/Lamp"/>
+        <Class IRI="#SmartLamp"/>
         <NamedIndividual IRI="#SmartLamp8"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1192,11 +1199,6 @@
                 <Variable IRI="urn:swrl:var#exhibit"/>
                 <Variable IRI="urn:swrl:var#numOfVisitorsNearExhibit"/>
             </DataPropertyAtom>
-            <DataPropertyAtom>
-                <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
-                <Variable IRI="urn:swrl:var#exhibit"/>
-                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-15T09:00:12Z</Literal>
-            </DataPropertyAtom>
         </Body>
         <Head>
             <ClassAtom>
@@ -1256,6 +1258,11 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#ObservationToLowLevelEnergy</IRI>
+        <Literal>Konstantinos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#SmartLamp</IRI>
         <Literal>Konstantinos</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>

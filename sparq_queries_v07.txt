@@ -1,4 +1,4 @@
-•	Which exhibits are located in UoAMuseumRoomA1?
+- Which exhibits are located in UoAMuseumRoomA1?
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -6,9 +6,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX geonames: <http://www.geonames.org/ontology#>
 PREFIX :<http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl#>
 SELECT ?x 
-WHERE { ?x  geonames:locatedIn :UoAMuseumRoomA1}
+WHERE { 
+?x  geonames:locatedIn :UoAMuseumRoomA1
+}
 
-•	How many sensors (all kinds) are hosted by IoTmuseumPlatfromLG?
+- How many sensors (all kinds) are hosted by IoTmuseumPlatfromLG?
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -17,9 +19,11 @@ PREFIX geonames: <http://www.geonames.org/ontology#>
 PREFIX sosa:<http://www.w3.org/ns/sosa/>
 PREFIX :<http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl#>
 SELECT (COUNT(?x) AS ?numOfSensors)
-WHERE {:IoTmuseumPlatfromLG sosa:hosts ?x}
+WHERE {
+:IoTmuseumPlatfromLG sosa:hosts ?x
+}
 
-•	Which rooms have been visited  by Visitor01 visited?
+- Which rooms have been visited  by Visitor01 visited?
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -28,9 +32,11 @@ PREFIX geonames: <http://www.geonames.org/ontology#>
 PREFIX sosa:<http://www.w3.org/ns/sosa/>
 PREFIX :<http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl#>
 SELECT ?x 
-WHERE { :Visitor01 :visits ?x}
+WHERE { 
+:Visitor01 :visits ?x
+}
 
-•	How many temperature measurements have been made in UoAMuseumRoomA1 between 09.00 and 17.00 on 07/12/2020?
+- How many temperature measurements have been made in UoAMuseumRoomA1 between 09.00 and 17.00 on 07/12/2020?
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -46,4 +52,17 @@ WHERE {
 FILTER(?resultTime>="2020-12-07T09:00:12Z"^^xsd:dateTime && ?resultTime <="2020-12-07T17:00:12Z"^^xsd:dateTime).
 }
 
+- For observations that are made for Painting01 (in UoAMuseumRoomA1) at 09.00, 15/01/2021, what is its status in terms of its lamp brightness level and nearby visitors?
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sosa:<http://www.w3.org/ns/sosa/>
+PREFIX :<http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl#>
+SELECT ?observation ?numberofvisitors ?brighteness 
+WHERE {
+?observation sosa:hasFeatureOfInterest :Painting01.		
+?observation :nearByVisitors ?numberofvisitors.
+?observation :brighteningLevel ?brighteness.
+?observation sosa:resultTime ?resultTime.
+FILTER(?resultTime="2021-01-15T09:00:12Z"^^xsd:dateTime)
+}
 
