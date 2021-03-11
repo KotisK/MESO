@@ -10,7 +10,7 @@ WHERE {
 ?x  geonames:locatedIn :UoAMuseumRoomA1
 }
 
-- How many sensors (all kinds) are hosted by IoTmuseumPlatfromLG?
+- How many sensors (all kinds) are hosted by IoTmuseumPlatformLG?
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -20,7 +20,7 @@ PREFIX sosa:<http://www.w3.org/ns/sosa/>
 PREFIX :<http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl#>
 SELECT (COUNT(?x) AS ?numOfSensors)
 WHERE {
-:IoTmuseumPlatfromLG sosa:hosts ?x
+:IoTmuseumPlatformLG sosa:hosts ?x
 }
 
 - Which rooms have been visited  by Visitor01 visited?
@@ -36,7 +36,7 @@ WHERE {
 :Visitor01 :visits ?x
 }
 
-- How many temperature measurements have been made in UoAMuseumRoomA1 between 09.00 and 17.00 on 07/12/2020?
+- What temperature measurements have been made in UoAMuseumRoomA1 between 09.00 and 17.00 on 07/12/2020?
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
