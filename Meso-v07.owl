@@ -111,6 +111,9 @@
         <Class IRI="#VIP_visitor"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto.owl#TrustedObservations"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://schema.org/Painting"/>
     </Declaration>
     <Declaration>
@@ -313,6 +316,12 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#teriadeMuseumRoomA1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/ntina/ontologies/2021/8/UOAMuseum-v1#proximityExhibit06"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/ntina/ontologies/2021/8/UOAMuseum-v1#proximitySensor06"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -734,7 +743,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://schema.org/location"/>
         <NamedIndividual IRI="#UoAMuseumRoomA2"/>
-        <NamedIndividual IRI="#UoAMuseumRoomA2"/>
+        <NamedIndividual IRI="#UoAMuseum"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#visits"/>
@@ -839,17 +848,17 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
         <NamedIndividual IRI="#exhibitProximityObservation0006"/>
-        <NamedIndividual IRI="#sculpture02"/>
+        <NamedIndividual IRI="#sculpture01"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
         <NamedIndividual IRI="#exhibitProximityObservation0006"/>
-        <NamedIndividual IRI="#proximitySensor05"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ntina/ontologies/2021/8/UOAMuseum-v1#proximitySensor06"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://www.w3.org/ns/sosa/observedProperty"/>
         <NamedIndividual IRI="#exhibitProximityObservation0006"/>
-        <NamedIndividual IRI="#proximityExhibit05"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ntina/ontologies/2021/8/UOAMuseum-v1#proximityExhibit06"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
@@ -1002,11 +1011,6 @@
         <Literal>Medium</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#brighteningLevel"/>
-        <NamedIndividual IRI="#exhibitProximityObservation0001"/>
-        <Literal>Medium</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#nearByVisitors"/>
         <NamedIndividual IRI="#exhibitProximityObservation0001"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
@@ -1069,7 +1073,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#nearByVisitors"/>
         <NamedIndividual IRI="#exhibitProximityObservation0005"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
@@ -1084,7 +1088,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#nearByVisitors"/>
         <NamedIndividual IRI="#exhibitProximityObservation0006"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
@@ -1094,12 +1098,12 @@
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.w3.org/ns/sosa/hasSimpleResult"/>
         <NamedIndividual IRI="#museumRoomTempObservation0001"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">18.0</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">17.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
         <NamedIndividual IRI="#museumRoomTempObservation0001"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-07T09:00:12Z</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-09T11:00:12Z</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.w3.org/ns/sosa/hasSimpleResult"/>
@@ -1109,27 +1113,27 @@
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
         <NamedIndividual IRI="#museumRoomTempObservation0002"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-07T12:00:12Z</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-10T11:00:12Z</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.w3.org/ns/sosa/hasSimpleResult"/>
         <NamedIndividual IRI="#museumRoomTempObservation0003"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">21.0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
-        <NamedIndividual IRI="#museumRoomTempObservation0003"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-07T15:00:12Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="http://www.w3.org/ns/sosa/hasSimpleResult"/>
-        <NamedIndividual IRI="#museumRoomTempObservation0004"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">17.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0003"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-11T11:00:12Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3.org/ns/sosa/hasSimpleResult"/>
         <NamedIndividual IRI="#museumRoomTempObservation0004"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-07T20:00:12Z</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">20.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
+        <NamedIndividual IRI="#museumRoomTempObservation0004"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-12T11:00:12Z</Literal>
     </DataPropertyAssertion>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isLightedBy"/>
@@ -1187,7 +1191,7 @@
         <Body>
             <DataPropertyAtom>
                 <DataProperty IRI="#brighteningLevel"/>
-                <Variable IRI="urn:swrl:var#exhibit"/>
+                <Variable IRI="urn:swrl:var#observation"/>
                 <Literal>Medium</Literal>
             </DataPropertyAtom>
             <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
@@ -1196,18 +1200,31 @@
             </BuiltInAtom>
             <DataPropertyAtom>
                 <DataProperty IRI="#nearByVisitors"/>
-                <Variable IRI="urn:swrl:var#exhibit"/>
+                <Variable IRI="urn:swrl:var#observation"/>
                 <Variable IRI="urn:swrl:var#numOfVisitorsNearExhibit"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="urn:swrl:var#trustValue"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.5</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="http://i-lab.aegean.gr/kotis/Ontologies/IoT/IoT-trust-onto.owl#hasTrustValue"/>
+                <Variable IRI="urn:swrl:var#observation"/>
+                <Variable IRI="urn:swrl:var#trustValue"/>
             </DataPropertyAtom>
         </Body>
         <Head>
             <ClassAtom>
                 <Class IRI="#InterestingExhibitProximityObservation"/>
-                <Variable IRI="urn:swrl:var#exhibit"/>
+                <Variable IRI="urn:swrl:var#observation"/>
             </ClassAtom>
             <ClassAtom>
                 <Class IRI="#ObservationToHighLevelEnergy"/>
-                <Variable IRI="urn:swrl:var#exhibit"/>
+                <Variable IRI="urn:swrl:var#observation"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto.owl#TrustedObservations"/>
+                <Variable IRI="urn:swrl:var#observation"/>
             </ClassAtom>
         </Head>
     </DLSafeRule>
@@ -1219,19 +1236,19 @@
             </BuiltInAtom>
             <DataPropertyAtom>
                 <DataProperty IRI="#brighteningLevel"/>
-                <Variable IRI="urn:swrl:var#exhibit"/>
+                <Variable IRI="urn:swrl:var#observation"/>
                 <Literal>Medium</Literal>
             </DataPropertyAtom>
             <DataPropertyAtom>
                 <DataProperty IRI="#nearByVisitors"/>
-                <Variable IRI="urn:swrl:var#exhibit"/>
+                <Variable IRI="urn:swrl:var#observation"/>
                 <Variable IRI="urn:swrl:var#numOfVisitorsNearExhibit"/>
             </DataPropertyAtom>
         </Body>
         <Head>
             <ClassAtom>
                 <Class IRI="#ObservationToLowLevelEnergy"/>
-                <Variable IRI="urn:swrl:var#exhibit"/>
+                <Variable IRI="urn:swrl:var#observation"/>
             </ClassAtom>
         </Head>
     </DLSafeRule>
